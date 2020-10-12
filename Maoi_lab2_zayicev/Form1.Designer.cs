@@ -46,6 +46,13 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
+            this.imageColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FirstZond = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SecondZond = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RType = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EnergyColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CorrelationColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -66,7 +73,7 @@
             this.addImagelToolStripButton});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1218, 27);
+            this.toolStrip1.Size = new System.Drawing.Size(1367, 27);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             this.toolStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolStrip1_ItemClicked);
@@ -140,7 +147,7 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Location = new System.Drawing.Point(1029, 47);
+            this.pictureBox2.Location = new System.Drawing.Point(595, 475);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(156, 192);
             this.pictureBox2.TabIndex = 3;
@@ -149,7 +156,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(1029, 245);
+            this.textBox1.Location = new System.Drawing.Point(595, 673);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(104, 57);
@@ -157,7 +164,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(1139, 273);
+            this.button1.Location = new System.Drawing.Point(705, 701);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(39, 29);
             this.button1.TabIndex = 5;
@@ -208,22 +215,79 @@
             this.textBox3.TabIndex = 10;
             this.textBox3.Text = "20";
             // 
+            // imageColumn
+            // 
+            this.imageColumn.HeaderText = "Image";
+            this.imageColumn.MinimumWidth = 6;
+            this.imageColumn.Name = "imageColumn";
+            this.imageColumn.Width = 125;
+            // 
+            // FirstZond
+            // 
+            this.FirstZond.HeaderText = "Z1";
+            this.FirstZond.MinimumWidth = 6;
+            this.FirstZond.Name = "FirstZond";
+            this.FirstZond.Width = 125;
+            // 
+            // SecondZond
+            // 
+            this.SecondZond.HeaderText = "Z2";
+            this.SecondZond.MinimumWidth = 6;
+            this.SecondZond.Name = "SecondZond";
+            this.SecondZond.Width = 125;
+            // 
+            // RType
+            // 
+            this.RType.HeaderText = "R";
+            this.RType.MinimumWidth = 6;
+            this.RType.Name = "RType";
+            this.RType.Width = 125;
+            // 
+            // EnergyColumn
+            // 
+            this.EnergyColumn.HeaderText = "Энергия";
+            this.EnergyColumn.MinimumWidth = 6;
+            this.EnergyColumn.Name = "EnergyColumn";
+            this.EnergyColumn.Width = 125;
+            // 
+            // CorrelationColumn
+            // 
+            this.CorrelationColumn.HeaderText = "Корреляция";
+            this.CorrelationColumn.MinimumWidth = 6;
+            this.CorrelationColumn.Name = "CorrelationColumn";
+            this.CorrelationColumn.Width = 125;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Гомогенность";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 125;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.imageColumn,
+            this.FirstZond,
+            this.SecondZond,
+            this.RType,
+            this.EnergyColumn,
+            this.CorrelationColumn,
+            this.Column1});
+            this.dataGridView1.Location = new System.Drawing.Point(532, 121);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.Size = new System.Drawing.Size(677, 340);
+            this.dataGridView1.TabIndex = 2;
+            this.dataGridView1.Text = "dataGridView1";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(1218, 769);
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(775, 45);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(237, 340);
-            this.dataGridView1.TabIndex = 2;
-            this.dataGridView1.Text = "dataGridView1";
+            this.ClientSize = new System.Drawing.Size(1367, 769);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.panel1);
@@ -268,6 +332,13 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn imageColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FirstZond;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SecondZond;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RType;
+        private System.Windows.Forms.DataGridViewTextBoxColumn EnergyColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CorrelationColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
     }
 }
 

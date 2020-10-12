@@ -48,6 +48,7 @@ namespace Maoi_lab2_zayicev
             RawColorMatrix = GetPixelsFromImageToAnArray(this.LocalImage);
             RGBColorMatrix = ConvertArraysOfColorToArrayOfStrings(RawColorMatrix);
             HalftoneMatrix = ConvertRGBToHalftone(RGBColorMatrix);
+            BinaryMatrix = TransformMatrixToBinary(HalftoneMatrix, 125);
         }
         public void TransformImageToHalfTone() 
         {
@@ -138,6 +139,25 @@ namespace Maoi_lab2_zayicev
             return color;
         }
 
+        private string[][] TransformMatrixToBinary(string[][] halftoneMatrix , int limit) 
+        {
+            string[][] newBinarryMatrix =  Array.ConvertAll(halftoneMatrix, a => (string[])a.Clone());//   ZondMatrix.HalftoneMatrix;
+
+            for (int i = 0; i < halftoneMatrix.Length; i++)
+            {
+                for (int j = 0; j < halftoneMatrix[i].Length; j++)
+                {
+                    if (Convert.ToInt32(newBinarryMatrix[i][j]) >= limit) 
+                    {
+                        newBinarryMatrix[i][j] = "255";
+                    }
+                    else
+                        newBinarryMatrix[i][j] = "0";
+
+                }
+            }
+            return newBinarryMatrix;
+        }
         private Color[][] GetPixelsFromImageToAnArray(Image image)
         {
             int height = image.Height;
