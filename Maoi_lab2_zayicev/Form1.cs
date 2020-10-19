@@ -162,7 +162,6 @@ namespace Maoi_lab2_zayicev
             ImageZondsMatrix.RawColorMatrix = ImageZondsMatrix.ConvertArraysOfStringToArrayOfColors(ImageZondsMatrix.RGBColorMatrix);
             imgCount++;
 
-            dataGridView1.Rows.Add($"{imgCount.ToString()}",$"{zond.ZondCross.HorisontalCrosses.ToString()}", $"{zond.ZondCross.VerticalCrosses.ToString()}" );//add finder
 
             //
             //zond - основные операции
@@ -219,7 +218,9 @@ namespace Maoi_lab2_zayicev
                 dbContext.Image.Add(imageLetterModel1);
                 dbContext.SaveChanges();
 */
-            textBox1.Text = $"letter is '{letter}' \n Distance is {minDistance} ";
+                textBox1.Text = $"letter is '{letter}' \n Distance is {minDistance} ";
+                dataGridView1.Rows.Add($"{letter}", $"{zond.ZondCross.HorisontalCrosses.ToString()}", $"{zond.ZondCross.VerticalCrosses.ToString()}",$"{minDistance}");//
+
             }
 
         }
@@ -292,6 +293,8 @@ namespace Maoi_lab2_zayicev
 
 
             UpdateListOfStandarts();
+            dataGridView1.Rows.Add($"{boxLetter}", $"{zond.ZondCross.HorisontalCrosses.ToString()}", $"{zond.ZondCross.VerticalCrosses.ToString()}");//add finder
+
         }
 
 
