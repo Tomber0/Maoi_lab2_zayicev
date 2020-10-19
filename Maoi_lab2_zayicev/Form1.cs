@@ -256,7 +256,7 @@ namespace Maoi_lab2_zayicev
                     }
                     else 
                     {
-                        dbContext.Standart.Add(new Models.StandartModel() {Horizontal = item.HorizontalAvg,Vertical = item.VerticalAvg });
+                        dbContext.Standart.Add(new Models.StandartModel() {Horizontal = item.HorizontalAvg,Vertical = item.VerticalAvg ,Letter = item.Letter});
                     }
                 }
                 dbContext.SaveChanges();
