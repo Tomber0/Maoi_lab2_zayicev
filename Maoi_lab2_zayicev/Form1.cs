@@ -94,8 +94,8 @@ namespace Maoi_lab2_zayicev
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            radioButton1.Checked = true;
             buttonsPannel1 = new List<RadioButton>();
+            radioButton1.Checked = true;
             FillPictureToWhiteBox();
             buttonsPannel1.Add(radioButton1);
             buttonsPannel1.Add(radioButton2);
