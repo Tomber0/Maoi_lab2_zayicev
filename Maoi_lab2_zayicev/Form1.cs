@@ -170,10 +170,10 @@ namespace Maoi_lab2_zayicev
 
             switch (CheckedPosition)
             {
-                case 1:
+                case 0:
                     CheckLetter(zond);
                     break;
-                case 2:
+                case 1:
                     AddLetter(zond,textBox4.Text);
 
                     break;
