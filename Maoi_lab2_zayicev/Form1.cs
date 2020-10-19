@@ -203,7 +203,7 @@ namespace Maoi_lab2_zayicev
                 char letter=' ';
                 foreach (var item in listOfStandarts)
                 {
-                    double mTempDistance = FindEuclidian(zond.ZondCross.VerticalCrosses, item.Vertical, zond.ZondCross.HorisontalCrosses, item.Vertical);
+                    double mTempDistance = FindEuclidian(zond.ZondCross.VerticalCrosses, item.Vertical, zond.ZondCross.HorisontalCrosses, item.Horizontal);
                     if (minDistance > mTempDistance) 
                     {
                         minDistance = mTempDistance;
