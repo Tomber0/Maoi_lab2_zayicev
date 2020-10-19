@@ -219,7 +219,7 @@ namespace Maoi_lab2_zayicev
                 dbContext.Image.Add(imageLetterModel1);
                 dbContext.SaveChanges();
 */
-            textBox3.Text = $"letter is '{letter}' \n Distance is {minDistance} ";
+            textBox1.Text = $"letter is '{letter}' \n Distance is {minDistance} ";
             }
 
         }
@@ -391,6 +391,13 @@ namespace Maoi_lab2_zayicev
                 i++;
             }
 
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            textBox2.Text = "142";
+            textBox3.Text = "260";
 
         }
     }
