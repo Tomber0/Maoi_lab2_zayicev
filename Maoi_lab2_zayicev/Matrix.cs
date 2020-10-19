@@ -138,6 +138,17 @@ namespace Maoi_lab2_zayicev
                 Convert.ToInt32(rGBstrings[2]));
             return color;
         }
+        private int TransformToNumber(string strNum)
+        {
+            string[] rGBstrings = strNum.Split(new char[] { ',', '\n' });
+            int newColor = (Convert.ToInt32(rGBstrings[0]) +
+                Convert.ToInt32(rGBstrings[1]) +
+                Convert.ToInt32(rGBstrings[2])) / 3;
+
+            return newColor;
+
+
+        }
 
         private string[][] TransformMatrixToBinary(string[][] halftoneMatrix , int limit) 
         {
@@ -147,17 +158,20 @@ namespace Maoi_lab2_zayicev
             {
                 for (int j = 0; j < halftoneMatrix[i].Length; j++)
                 {
-                    if (Convert.ToInt32(newBinarryMatrix[i][j]) >= limit) 
+                    if (TransformToNumber(newBinarryMatrix[i][j]) >= limit) 
                     {
-                        newBinarryMatrix[i][j] = "255";
+                        newBinarryMatrix[i][j] = "255,255,255";
                     }
                     else
-                        newBinarryMatrix[i][j] = "0";
+                        newBinarryMatrix[i][j] = "0,0,0";
 
                 }
             }
             return newBinarryMatrix;
         }
+
+
+
         private Color[][] GetPixelsFromImageToAnArray(Image image)
         {
             int height = image.Height;

@@ -7,17 +7,6 @@ namespace Maoi_lab2_zayicev
 {
     class Zond
     {
-        public class ZondCrosses 
-        {
-            public int VerticalCrosses { get; set; }
-            public int HorisontalCrosses { get; set; }
-
-            public ZondCrosses(int x, int y) 
-            {
-                VerticalCrosses = x;
-                HorisontalCrosses = y;
-            }
-        }
         public ZondCrosses ZondCross { get; set; }
         public int YCoordinate { get; set; }
         public int XCoordinate { get; set; }
@@ -63,7 +52,7 @@ namespace Maoi_lab2_zayicev
             for (int i = 0+1; i < ZondMatrix.Height-1; i++)
             {
                 if ((LinesMatrix[XCoordinate][i - 1] == "-1") && (TransformToNumber(ZondMatrix.HalftoneMatrix[XCoordinate][i]) <= 150) && (LinesMatrix[XCoordinate][i + 1] == "-1"))
-                    x++;
+                    y++;
                 while ((i < ZondMatrix.Height - 1) &&((TransformToNumber(ZondMatrix.HalftoneMatrix[XCoordinate][i]) <= 150))) 
                 {
                     i++;
@@ -74,17 +63,22 @@ namespace Maoi_lab2_zayicev
             for (int j = 0+1; j < ZondMatrix.Width-1; j++)
             {
                 if ((LinesMatrix[j-1][YCoordinate] == "-1") && (TransformToNumber(ZondMatrix.HalftoneMatrix[j][YCoordinate]) <= 150) && (LinesMatrix[j + 1][YCoordinate] == "-1"))
-                    y++;
+                    x++;
                 while ((j < ZondMatrix.Width - 1) && ((TransformToNumber(ZondMatrix.HalftoneMatrix[j][YCoordinate]) <= 150)))
                 {
                     j++;
                 }
                 //LinesMatrix[j][YCoordinate] = "-1";
             }
+
+
             ZondCross = new ZondCrosses(x, y);
 
 
+
         }
+        
+
         private int TransformToNumber(string strNum) 
         {
             string[] rGBstrings = strNum.Split(new char[] { ',', '\n' });

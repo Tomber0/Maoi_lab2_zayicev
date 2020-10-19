@@ -38,7 +38,6 @@
             this.addImagelToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -46,18 +45,16 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
-            this.imageColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FirstZond = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SecondZond = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RType = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EnergyColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CorrelationColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.label2 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -145,28 +142,19 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Location = new System.Drawing.Point(595, 475);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(156, 192);
-            this.pictureBox2.TabIndex = 3;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
-            // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(595, 673);
+            this.textBox1.Location = new System.Drawing.Point(532, 467);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(104, 57);
+            this.textBox1.Size = new System.Drawing.Size(282, 90);
             this.textBox1.TabIndex = 4;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(705, 701);
+            this.button1.Location = new System.Drawing.Point(858, 466);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(39, 29);
+            this.button1.Size = new System.Drawing.Size(87, 29);
             this.button1.TabIndex = 5;
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
@@ -205,7 +193,7 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(52, 27);
             this.textBox2.TabIndex = 9;
-            this.textBox2.Text = "15";
+            this.textBox2.Text = "142";
             // 
             // textBox3
             // 
@@ -213,68 +201,62 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(52, 27);
             this.textBox3.TabIndex = 10;
-            this.textBox3.Text = "20";
+            this.textBox3.Text = "260";
             // 
-            // imageColumn
+            // panel2
             // 
-            this.imageColumn.HeaderText = "Image";
-            this.imageColumn.MinimumWidth = 6;
-            this.imageColumn.Name = "imageColumn";
-            this.imageColumn.Width = 125;
+            this.panel2.Controls.Add(this.textBox4);
+            this.panel2.Controls.Add(this.radioButton2);
+            this.panel2.Controls.Add(this.radioButton1);
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Location = new System.Drawing.Point(532, 563);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(314, 125);
+            this.panel2.TabIndex = 12;
             // 
-            // FirstZond
+            // textBox4
             // 
-            this.FirstZond.HeaderText = "Z1";
-            this.FirstZond.MinimumWidth = 6;
-            this.FirstZond.Name = "FirstZond";
-            this.FirstZond.Width = 125;
+            this.textBox4.Location = new System.Drawing.Point(239, 76);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(43, 27);
+            this.textBox4.TabIndex = 15;
             // 
-            // SecondZond
+            // radioButton2
             // 
-            this.SecondZond.HeaderText = "Z2";
-            this.SecondZond.MinimumWidth = 6;
-            this.SecondZond.Name = "SecondZond";
-            this.SecondZond.Width = 125;
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(22, 77);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(162, 24);
+            this.radioButton2.TabIndex = 14;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "Добавление буквы";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged_1);
             // 
-            // RType
+            // radioButton1
             // 
-            this.RType.HeaderText = "R";
-            this.RType.MinimumWidth = 6;
-            this.RType.Name = "RType";
-            this.RType.Width = 125;
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(22, 47);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(119, 24);
+            this.radioButton1.TabIndex = 13;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Поиск буквы";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged_1);
             // 
-            // EnergyColumn
+            // label2
             // 
-            this.EnergyColumn.HeaderText = "Энергия";
-            this.EnergyColumn.MinimumWidth = 6;
-            this.EnergyColumn.Name = "EnergyColumn";
-            this.EnergyColumn.Width = 125;
-            // 
-            // CorrelationColumn
-            // 
-            this.CorrelationColumn.HeaderText = "Корреляция";
-            this.CorrelationColumn.MinimumWidth = 6;
-            this.CorrelationColumn.Name = "CorrelationColumn";
-            this.CorrelationColumn.Width = 125;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Гомогенность";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 125;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(11, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(112, 20);
+            this.label2.TabIndex = 12;
+            this.label2.Text = "Режим работы";
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.imageColumn,
-            this.FirstZond,
-            this.SecondZond,
-            this.RType,
-            this.EnergyColumn,
-            this.CorrelationColumn,
-            this.Column1});
             this.dataGridView1.Location = new System.Drawing.Point(532, 121);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
@@ -288,6 +270,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1367, 769);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.panel1);
@@ -295,17 +278,17 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.toolStrip1);
             this.Name = "Form1";
-            this.Text = "\r\n";
+            this.Text = "\r\n142";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -324,7 +307,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ToolStripButton addImagelToolStripButton;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
@@ -332,13 +314,11 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn imageColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FirstZond;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SecondZond;
-        private System.Windows.Forms.DataGridViewTextBoxColumn RType;
-        private System.Windows.Forms.DataGridViewTextBoxColumn EnergyColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CorrelationColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox textBox4;
     }
 }
 
