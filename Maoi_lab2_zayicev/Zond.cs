@@ -45,6 +45,40 @@ namespace Maoi_lab2_zayicev
             ZondImage();
             //NormilizeZondMatrix(LinesMatrix);
         }
+        private void ZondMarginImage() 
+        {
+            int x = 0;
+            int y = 0;
+            for (int i = 0 + 1; i < ZondMatrix.Height - 1; i++)
+            {
+                if ((LinesMatrix[XCoordinate][i - 1] == "-1") && (TransformToNumber(ZondMatrix.HalftoneMatrix[XCoordinate][i]) <= 150) && (LinesMatrix[XCoordinate][i + 1] == "-1"))
+                    y++;
+                while ((i < ZondMatrix.Height - 1) && ((TransformToNumber(ZondMatrix.HalftoneMatrix[XCoordinate][i]) <= 150)))
+                {
+                    i++;
+                }
+                // LinesMatrix[XCoordinate][i] = "-1";
+
+            }
+            for (int j = 0 + 1; j < ZondMatrix.Width - 1; j++)
+            {
+                if ((LinesMatrix[j - 1][YCoordinate] == "-1") && (TransformToNumber(ZondMatrix.HalftoneMatrix[j][YCoordinate]) <= 150) && (LinesMatrix[j + 1][YCoordinate] == "-1"))
+                    x++;
+                while ((j < ZondMatrix.Width - 1) && ((TransformToNumber(ZondMatrix.HalftoneMatrix[j][YCoordinate]) <= 150)))
+                {
+                    j++;
+                }
+                //LinesMatrix[j][YCoordinate] = "-1";
+            }
+
+
+            ZondCross = new ZondCrosses(x, y);
+
+
+
+
+
+        }
         private void ZondImage() 
         {
             int x = 0;
@@ -73,8 +107,6 @@ namespace Maoi_lab2_zayicev
 
 
             ZondCross = new ZondCrosses(x, y);
-
-
 
         }
         

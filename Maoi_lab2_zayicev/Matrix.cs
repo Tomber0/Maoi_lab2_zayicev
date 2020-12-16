@@ -78,8 +78,6 @@ namespace Maoi_lab2_zayicev
         public string[][] RGBColorMatrix { get; set; }
         public string[][] BinaryMatrix { get; set; }
         public string[][] HalftoneMatrix { get; set; }
-
-
         //string[][]
         public string[][] ConvertRGBToHalftone(string[][] rgbMatrix)
         {
@@ -164,13 +162,10 @@ namespace Maoi_lab2_zayicev
                     }
                     else
                         newBinarryMatrix[i][j] = "0,0,0";
-
                 }
             }
             return newBinarryMatrix;
         }
-
-
 
         private Color[][] GetPixelsFromImageToAnArray(Image image)
         {

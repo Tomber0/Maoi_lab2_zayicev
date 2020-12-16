@@ -37,11 +37,16 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="DevExpress.Data" Version="20.1.8" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.9" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.9">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="Steema.TeeChart.NETCore" Version="4.2020.9.16" />
+    <PackageReference Include="Steema.TeeChart.NETCore.WPF" Version="4.2020.9.16" />
+    <PackageReference Include="Steema.TeeGrid.NETCore.WinForm" Version="1.2020.1.13" />
+    <PackageReference Include="System.Windows.Forms.DataVisualization" Version="1.0.0-prerelease.20110.1" />
   </ItemGroup>
 
 </Project>
